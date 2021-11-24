@@ -305,8 +305,4 @@
     }
     element.checked = true;
   }
-
-  window.addEventListener('scroll', function() {
-    document.getElementById('scrollUpButton').hidden = scrollY < 30;
-  });
 </script>

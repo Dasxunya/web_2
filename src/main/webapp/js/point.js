@@ -1,5 +1,5 @@
 let x, yCoord;
-let r = 0;
+let rCoord;
 const svgSize = 300;
 document.getElementById("graph_pic").addEventListener("click", checkPoint);
 let graph = document.getElementById("graph_pic");
@@ -10,11 +10,11 @@ function checkPoint(event) {
 
     if (isValueR(rCoord)) {
         const domRect = graph.getBoundingClientRect();
-        const rowX = event.pageX - domRect.x;
-        const rowY = event.pageY - domRect.y;
-        x = ((r * (svgSize / 2 - rowX) * -1) / 100).toFixed(2);
-        yCoord = ((r * (svgSize / 2 - rowY)) / 100).toFixed(2);
-        sendRequest(x, yCoord, r);
+        const rowX = event.clientX - domRect.x;
+        const rowY = event.clientY - domRect.y;
+        x = ((rCoord * (svgSize / 2 - rowX) * -1) / 100).toFixed(2);
+        yCoord = ((rCoord * (svgSize / 2 - rowY)) / 100).toFixed(2);
+        sendRequest(x, yCoord, rCoord);
     } else {
         alert('Выберите радиус R');
     }
