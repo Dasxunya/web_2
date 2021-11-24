@@ -3,13 +3,9 @@ let r = 0;
 const svgSize = 300;
 document.getElementById("graph_pic").addEventListener("click", checkPoint);
 let graph = document.getElementById("graph_pic");
-
+/*TODO: проверить наличие радиуса в текстовом блоке*/
 function checkPoint(event) {
-    if (document.getElementById("cb1").checked) r = 1;
-    else if (document.getElementById("cb2").checked) r = 2;
-    else if (document.getElementById("cb3").checked) r = 3;
-    else if (document.getElementById("cb4").checked) r = 4;
-    else if (document.getElementById("cb5").checked) r = 5;
+    if (document.getElementById("rField").checked) r = document.getElementById("yField").value.trim();
     if (r !== 0) {
         const domRect = graph.getBoundingClientRect();
         const rowX = event.pageX - domRect.x;

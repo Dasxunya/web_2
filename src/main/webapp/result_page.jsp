@@ -15,7 +15,7 @@
 <body>
 <table id="body-table">
     <tr>
-        <th class="header">
+        <th class="header1">
             <a href="https://github.com/dasxunya"><img src="img/round.jpg" title="icon" alt="icon" width="70" height="70"></a>
             <div>
                 <p>Результат проверки</p>

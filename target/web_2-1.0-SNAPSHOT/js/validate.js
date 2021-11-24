@@ -1,4 +1,5 @@
 let y;
+let r;
 
 document.getElementById("function-btn").addEventListener("click", validate);
 
