@@ -237,7 +237,7 @@
     <tr>
       <td class="math" colspan="3" align="center">
         <p>
-          <button id="function-btn" class="btn" type="click" name="send">Ввод</button>
+          <button id="function-btn" class="btn" type="submit" name="send">Ввод</button>
         </p>
       </td>
     </tr>
@@ -281,13 +281,13 @@
       }
     %>
 
-    <form method="get" action="main">
+   <%-- <form method="get" action="main">
       <tr>
         <td colspan="6" bgcolor="#cec3b1"><br>
           <button class="btn" type="click" name="clear-table">Очистить</button>
         </td>
       </tr>
-    </form>
+    </form>--%>
 
   </table>
 </dev>

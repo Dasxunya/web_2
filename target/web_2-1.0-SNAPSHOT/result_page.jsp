@@ -22,9 +22,9 @@
             </div>
         </th>
     </tr>
-
     <tr>
         <th>
+            <dev>
                 <table id="finish_table">
                     <caption>Результат</caption>
                     <tr>
@@ -50,6 +50,7 @@
                         }
                     %>
                 </table>
+            </dev>
             <form method="get" action="main">
                 <button type="submit" class="btn">Назад</button>
             </form>

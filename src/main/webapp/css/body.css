@@ -5,7 +5,11 @@ body {
     color: #FFFAF0;
     background-size: 100%;
 }
-
+#body-table {
+    width: 100%;
+    cellpadding: 0;
+    cellspacing: 0;
+}
 p {
     color: #3f1f0b;
 }
