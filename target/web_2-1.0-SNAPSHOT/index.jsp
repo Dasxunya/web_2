@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <title>Web_2</title>
   <link rel="shortcut icon" href="img/round.jpg">
-
+  <script src="js/jquery-3.6.0.min.js"></script>
   <style>
     body {
       background: url(img/fl.jpg);
@@ -115,7 +115,7 @@
   <tr>
     <td colspan="4" bgcolor="#f1dbb0" align="center"><font size="6pt"
                                                            face="Times New Roman, Helvetica, serif"
-                                                           color="#6a310a">Лабораторная работа№1
+                                                           color="#6a310a">Лабораторная работа№2
       по Web-программированию</font></td>
   </tr>
 
@@ -305,8 +305,4 @@
     }
     element.checked = true;
   }
-
-  window.addEventListener('scroll', function() {
-    document.getElementById('scrollUpButton').hidden = scrollY < 30;
-  });
 </script>

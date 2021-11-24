@@ -5,8 +5,10 @@ document.getElementById("graph_pic").addEventListener("click", checkPoint);
 let graph = document.getElementById("graph_pic");
 /*TODO: проверить наличие радиуса в текстовом блоке*/
 function checkPoint(event) {
-    if (document.getElementById("rField").checked) r = document.getElementById("yField").value.trim();
-    if (r !== 0) {
+    let rText = document.getElementById("rField");
+    rCoord = rText.value.trim();
+
+    if (isValueR(rCoord)) {
         const domRect = graph.getBoundingClientRect();
         const rowX = event.pageX - domRect.x;
         const rowY = event.pageY - domRect.y;
@@ -17,7 +19,12 @@ function checkPoint(event) {
         alert('Выберите радиус R');
     }
 }
-
+function isValueR(r){
+    if (/^-?\d+\.?\d*$/.test(r)) {
+        if (r >=4 || r <= 1) return false;
+        else return true;
+    } else return false;
+}
 function sendRequest(x, y, r) {
     $.ajax({
         type: 'GET',
