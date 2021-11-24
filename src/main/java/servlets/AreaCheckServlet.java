@@ -57,11 +57,11 @@ public class AreaCheckServlet extends HttpServlet {
     }
 
     private boolean isInTriangle(Result result) {
-        return result.getX() * (-2) + result.getR() >= result.getY() && result.getY() >= 0 && result.getX() >= 0;
+        return result.getX() / (2) - result.getR() / 2 <= result.getY() && result.getY() <= 0 && result.getX() >= 0;
     }
 
     private boolean isInRectangle(Result result) {
-        return result.getX() <= result.getR() && result.getX() >= 0 && result.getY() <= 0 && result.getY() >= result.getR() * (-0.5);
+        return result.getX() <= result.getR() / 2 && result.getX() >= 0 && result.getY() >= 0 && result.getY() <= result.getR();
     }
 
     private boolean isInCircle(Result result) {
