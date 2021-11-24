@@ -143,7 +143,7 @@
       <td align="center">
         <p>
         <p><b>Введите Y из диапазона (-5; 5):</b></p>
-        <p><input type="text" class="number" data-min="-5" data-max="5" data-separator="." name="y"
+        <p><input type="text" id="yField" data-min="-5" data-max="5" data-separator="." name="y"
                   placeholder="Y" autocomplete="off" required></p>
         </p>
       </td>
@@ -151,8 +151,8 @@
       <td align="center">
         <p>
         <p><b>Введите R из диапазона (1; 4):</b></p>
-        <p><input type="text" class="number" data-min="1" data-max="4" data-separator="." name="R"
-                  placeholder="r" autocomplete="off" required></p>
+        <p><input type="text" id="rField" data-min="1" data-max="4" data-separator="." name="r"
+                  placeholder="R" autocomplete="off" required></p>
         </p>
       </td>
 
@@ -196,23 +196,23 @@
           <text fill="black" x="285" y="140">X</text>
           <text fill="black" x="160" y="15">Y</text>
 
-          <!-- Треугольник (1 четверть) -->
-          <polygon fill="blue"
+          <!-- Прямоугольник (1 четверть) -->
+          <polygon fill="orange"
                    fill-opacity="0.2"
-                   stroke="blue"
-                   points="150,150 200,150 150,50"></polygon>
+                   stroke="orange"
+                   points="150,150 150,50 200,50 200,150"></polygon>
 
           <!-- Круг (2 четверть) -->
-          <path fill="blue"
+          <path fill="orange"
                 fill-opacity="0.2"
-                stroke="blue"
+                stroke="orange"
                 d="M 50 150 A 100 100, 90, 0, 0, 150 250 L 150 150 Z"></path>
 
           <!-- Прямоугольник (4 четверть) -->
-          <polygon fill="blue"
+          <polygon fill="orange"
                    fill-opacity="0.2"
-                   stroke="blue"
-                   points="150,150 250,150 250,200 150,200"></polygon>
+                   stroke="orange"
+                   points="150,150 250,150 150,200"></polygon>
 
           <!-- Здесь будут точки на графике -->
           <%
@@ -237,7 +237,7 @@
     <tr>
       <td class="math" colspan="3" align="center">
         <p>
-          <button class="btn" type="click" name="send">Ввод</button>
+          <button id="function-btn" class="btn" type="click" name="send">Ввод</button>
         </p>
       </td>
     </tr>
@@ -263,9 +263,8 @@
       <th class="res">X</th>
       <th class="res">Y</th>
       <th class="res">R</th>
-      <th class="res">Попадание</th>
       <th class="res">Текущее время</th>
-      <th class="res">Время исполнения</th>
+      <th class="res">Попадание</th>
       </td>
     </tr>
 
@@ -282,7 +281,7 @@
       }
     %>
 
-    <form id="coordinates-form" method="get" action="main">
+    <form method="get" action="main">
       <tr>
         <td colspan="6" bgcolor="#cec3b1"><br>
           <button class="btn" type="click" name="clear-table">Очистить</button>
@@ -292,6 +291,8 @@
 
   </table>
 </dev>
+<script src="js/validate.js"></script>
+<script src="js/point.js"></script>
 </body>
 </html>
 <script>

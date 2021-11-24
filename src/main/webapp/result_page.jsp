@@ -6,6 +6,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
     <link rel="shortcut icon" href="img/round.jpg">
     <title>Result</title>
 </head>
@@ -23,7 +25,7 @@
 
     <tr>
         <th>
-                <table id="finish-table">
+                <table id="finish_table">
                     <caption>Результат</caption>
                     <tr>
                         <th class="col">X</th>
@@ -49,7 +51,7 @@
                     %>
                 </table>
             <form method="get" action="main">
-                <button type="submit" class="gradient-button">Назад</button>
+                <button type="submit" class="btn">Назад</button>
             </form>
         </th>
     </tr>
